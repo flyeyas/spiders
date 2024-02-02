@@ -301,7 +301,7 @@ function D_e() {
 
 
 
-// console.log(D_e().encrypt('{"key":"query"}'));
+console.log(D_e().encrypt('{"key":"query"}'));
 
 function get_encrypt_data(params) {
   return D_e().encrypt(JSON.stringify(params));
@@ -309,27 +309,27 @@ function get_encrypt_data(params) {
 
 
  // 第二次 非对称加密
-// const JSEncrypt = require('jsencrypt')
+const JSEncrypt = require('jsencrypt')
 
 
 
-// const F_e = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC29miF1Wp9XlhCECo+FYpCHad1ipEMgXf4IdgYjMIQwczzo9GXdcZ4eeV+9lkh6+aTqzzU843rdkMt0vrSnujU+GOuDPLfa5LZ6SfanAoysi6xxTX02Xizb3k+Z1USIzm9QAwE+SR1AQ78rGTRFHWFu7OGPkVNeF+vrX3inQTiawIDAQAB";
+const F_e = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC29miF1Wp9XlhCECo+FYpCHad1ipEMgXf4IdgYjMIQwczzo9GXdcZ4eeV+9lkh6+aTqzzU843rdkMt0vrSnujU+GOuDPLfa5LZ6SfanAoysi6xxTX02Xizb3k+Z1USIzm9QAwE+SR1AQ78rGTRFHWFu7OGPkVNeF+vrX3inQTiawIDAQAB";
 
-// function V_e(e) {
+function V_e(e) {
 
-//     var jsencrypt = new JSEncrypt()
-//     jsencrypt['setPublicKey'](F_e);
-//     const o = 117
-//       , r = Math['ceil'](e['length'] / o);
-//     let s = [];
-//     for (let a = 0; a < r; a++) {
-//         const l = e['slice'](a * o, (a + 1) * o)
-//           , i = jsencrypt['encrypt'](l);
-//         s.push(i)
-//     }
-//     return s.join(",")
-// }
+    var jsencrypt = new JSEncrypt()
+    jsencrypt['setPublicKey'](F_e);
+    const o = 117
+      , r = Math['ceil'](e['length'] / o);
+    let s = [];
+    for (let a = 0; a < r; a++) {
+        const l = e['slice'](a * o, (a + 1) * o)
+          , i = jsencrypt['encrypt'](l);
+        s.push(i)
+    }
+    return s.join(",")
+}
 
-// console.log(V_e('FnQXKsRv5WTfL5JYWvwVsw=='));
+console.log(V_e('FnQXKsRv5WTfL5JYWvwVsw=='));
 
 // 你要扮演一个编程专家，精通javascript和Python语言，请把上面的JavaScript语言程序，使用Python语言重新实现一下

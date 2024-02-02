@@ -18,7 +18,7 @@ class Mafengwo(feapder.AirSpider):
     # 定义最大爬取页数
     max_page = 15
     # 定义存储文件路径
-    save_fi le = './mafengwo.csv'
+    save_file = './mafengwo.csv'
 
     def start_requests(self):
         # 如果文件存在，则删除
